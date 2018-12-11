@@ -7,6 +7,8 @@ const server = http.createServer((req, res) => {
   const url = req.url;
   const method = req.method;
   if (url === '/') {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+
     res.write(`
       <html>
         <head>
@@ -22,9 +24,18 @@ const server = http.createServer((req, res) => {
     return res.end();
   }
   if (url === '/message' && method === 'POST') {
-    fs.writeFileSync('message.txt', 'DUMMY');
-    res.writeHead(304, {'Location': '/'});
-    return res.end();
+    const body = [];
+    req.on('data', chunk => {
+      body.push(chunk);
+      console.log(chunk);
+    })
+    return req.on('end', () => {
+      const parseBody = Buffer.concat(body).toString();
+      const message = parseBody.split('=')[1];
+      fs.writeFileSync('message.txt', message);
+      res.writeHead(304, {'Location': '/'});
+      return res.end();
+    });
   }
 
 
