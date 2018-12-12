@@ -15,7 +15,12 @@ const requestHandler = (req, res) => {
           <title>My first Page</title>
         </head>
         <body>
-          <h1>The Main Project Page</h1>
+          <h1>The Create User Page</h1>
+          <form action='/create-user' method='POST'>
+            <legend>Create User</legend>
+            <input type='text' name='username' placeholder='username'>
+            <button type='submit'>Send</button>
+          </form>
         </body>
       </html>`);
     return res.end();
