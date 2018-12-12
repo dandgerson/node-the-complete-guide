@@ -44,7 +44,23 @@ const requestHandler = (req, res) => {
         </body>
       </html>`);
     return res.end();
+  }
 
+  if (url === '/create-user' && method === 'POST') {
+    const body = [];
+    req.on('data', chunk => {
+      body.push(chunk);
+    });
+
+    return req.on('end', () => {
+      const parseBody = Buffer.concat(body).toString();
+      const username = parseBody.split('=')[1];
+      
+      console.log(username);
+
+      res.writeHead(304, {'Location': '/'});
+      return res.end();
+    });
   }
 
   res.writeHead(200, {'Content-Type': 'text/html'});
