@@ -56,7 +56,7 @@ const requestHandler = (req, res) => {
       
       console.log(username);
 
-      res.writeHead(304, {'Location': '/'});
+      res.writeHead(302, {'Location': '/'});
       return res.end();
     });
   }
