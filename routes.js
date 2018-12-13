@@ -12,7 +12,7 @@ const requestHandler = (req, res) => {
     res.write(`
       <html>
         <head>
-          <title>My first Page</title>
+          <title>My second Page</title>
         </head>
         <body>
           <form action='/message' method='POST'>
@@ -33,19 +33,18 @@ const requestHandler = (req, res) => {
     });
     
     return req.on('end', () => {
-      const parseBody = Buffer.concat(body).toString();
-      const message = parseBody.split('=')[1];
+      const parsedBody = Buffer.concat(body).toString();
+      const message = parsedBody.split('=')[1];
       
       fs.writeFile('./message.txt', message, err => {
         if (err) throw err;
         
-        res.writeHead(304, {'Location': '/'});
+        res.writeHead(302, {'Location': '/'});
         return res.end();
       });
       
     });
   }
-
   res.writeHead(200, {'Content-Type': 'text/html'});
 
   res.end('Default Server Behavior...');
