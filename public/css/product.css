@@ -17,17 +17,3 @@
   font: inherit;
   border-radius: 3px;
 }
-
-button {
-  font: inherit;
-  border: 1px solid #7F7F7F;
-  border-radius: 3px;
-  background-color: #CCCCCC;
-  color: #444444;
-  cursor: pointer;
-}
-button:active,
-button:hover {
-  color: #222222;
-  background-color: #919191;
-}
