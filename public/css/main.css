@@ -65,7 +65,8 @@ main {
 }
 
 .card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 8px 3px rgb(68, 68, 68);
+  margin-bottom: 1.5rem;
 }
 
 .card__header,
@@ -101,7 +102,7 @@ main {
 .btn {
   font: inherit;
   border: 1px solid #272727;
-  color: #444444;
+  color: #272727;
   background: #CCCCCC;
   border-radius: 3px;
   cursor: pointer;
@@ -109,6 +110,7 @@ main {
 
 .btn:hover,
 .btn:active {
-  background-color: #444444;
+  background-color: #7F7F7F;
   color: #CCCCCC;
+  box-shadow: 0px 0px 8px 3px #89F5A2;
 }
