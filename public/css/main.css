@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #7F7F7F;
+}
+
 body {
+  background-color: #222222;
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: #CCCCCC;
 }
 
 main {
@@ -18,7 +24,7 @@ main {
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #00695c;
+  background-color: #444444;
   padding: 0 1.5rem;
 }
 
@@ -42,13 +48,13 @@ main {
 
 .main-header__item a {
   text-decoration: none;
-  color: white;
+  color: #CCCCCC;
 }
 
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #ffeb3b;
+  color: #89F5A2;
 }
 
 .grid {
@@ -94,15 +100,15 @@ main {
 
 .btn {
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
-  background: white;
+  border: 1px solid #272727;
+  color: #444444;
+  background: #CCCCCC;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
-  color: white;
+  background-color: #444444;
+  color: #CCCCCC;
 }
