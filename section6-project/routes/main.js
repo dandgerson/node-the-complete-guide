@@ -8,12 +8,18 @@ const users = [];
 
 router.get('/', (req, res, next) => {
   res.render('index', {
-    pageTitle: 'Add User',
+    pageTitle: 'Home',
     path: '/',
   });
 });
 
 router.post('/', (req, res, next) => {
-  users.push({user: req.body.username});
+  users.push({
+    username: req.body.username,
+    age: req.body.age,
+  });
   res.redirect('/');
 });
+
+exports.routes = router;
+exports.users = users;

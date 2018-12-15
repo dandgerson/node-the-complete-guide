@@ -1,0 +1,39 @@
+<%- include('./includes/head.ejs')%>
+  <link rel="stylesheet" href="/css/userlist.css">
+  </head>
+  <body>
+
+    <%- include('./includes/navigation.ejs') %>
+
+    <main>
+      <h1>Users</h1>
+      <% if (users.length > 0) { %>
+        <ul class="userlist">
+        <% for (const user of users) { %>
+          <li class="userlist__item">
+              <% if (!user.username) { %>
+                'The field "Username" is not filled'
+              <% } else { %>
+                <%= user.username %>
+              <% } %>
+            <ul>
+              <% if (!user.username) { %>
+                <li>Username: The field "Username" is not filled</li>
+              <% } else { %>
+                <li>Username: <%= user.username %></li>
+              <% } %>
+              <% if (!user.age) { %>
+                <li>Age: The field "Age" is not filled</li>
+              <% } else { %>
+                <li>Age: <%= user.age %></li>
+              <% } %>
+            </ul>
+          </li>
+        <% } %>
+        </ul>
+      <% } else { %>
+        <p>User List is empty</p>
+      <% } %>
+    </main>
+
+<%- include('./includes/end.ejs')%>

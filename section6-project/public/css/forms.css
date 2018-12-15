@@ -1,0 +1,19 @@
+.user-form {
+  width: 20rem;
+  max-width: 100%;
+  margin: auto;
+}
+.form-control {
+  margin: 1rem 0;
+}
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  border: 1px solid #7F7F7F;
+  font: inherit;
+  border-radius: 3px;
+}

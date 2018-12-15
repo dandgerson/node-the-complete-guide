@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #222222;
+  color: #CCCCCC;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #7F7F7F
+}
+
+main {
+  padding: 1rem;
+}
+
+.main-header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #444444;
+  padding: 0 1.5rem;
+}
+
+.main-header__nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__item-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.main-header__item {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.main-header__item a {
+  text-decoration: none;
+  color: #CCCCCC;
+}
+.main-header__item a:visited {
+  color: #CCCCCC;
+}
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+  color: #89F5A2;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p {
+  margin: 0;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__image img {
+  width: 100%;
+}
+
+.card__actions {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card__actions button,
+.card__actions a {
+    margin: 0 0.25rem;
+}
+
+.btn {
+  font: inherit;
+  border: 1px solid #7F7F7F;
+  border-radius: 3px;
+  background-color: #CCCCCC;
+  color: #444444;
+  cursor: pointer;
+}
+.btn:active,
+.btn:hover {
+  color: #222222;
+  background-color: #919191;
+}
