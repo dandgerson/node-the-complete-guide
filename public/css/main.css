@@ -7,23 +7,18 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #222222;
-  color: #CCCCCC;
   font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #7F7F7F
 }
 
 main {
   padding: 1rem;
+  margin: auto;
 }
 
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #444444;
+  background-color: #00695c;
   padding: 0 1.5rem;
 }
 
@@ -34,29 +29,26 @@ main {
 }
 
 .main-header__item-list {
-  padding: 0;
-  margin: 0;
   list-style: none;
-
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
 .main-header__item {
-  padding: 0 1rem;
-  margin: 0;
+  margin: 0 1rem;
+  padding: 0;
 }
 
 .main-header__item a {
   text-decoration: none;
-  color: #CCCCCC;
+  color: white;
 }
-.main-header__item a:visited {
-  color: #CCCCCC;
-}
+
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #89F5A2;
+  color: #ffeb3b;
 }
 
 .grid {
@@ -102,14 +94,15 @@ main {
 
 .btn {
   font: inherit;
-  border: 1px solid #7F7F7F;
+  border: 1px solid #00695c;
+  color: #00695c;
+  background: white;
   border-radius: 3px;
-  background-color: #CCCCCC;
-  color: #444444;
   cursor: pointer;
 }
-.btn:active,
-.btn:hover {
-  color: #222222;
-  background-color: #919191;
+
+.btn:hover,
+.btn:active {
+  background-color: #00695c;
+  color: white;
 }
