@@ -15,15 +15,15 @@ exports.getAddProduct = (req, res, next) => {
 exports.postAddProduct = (req, res, next) => {
   const product = new Product(req.body.title);
   product.save();
-  res.redirect('/');
+  res.redirect('/products');
 };
 
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
-    res.render('shop/product-list', {
+    res.render('admin/products', {
       prods: products,
-      pageTitle: 'Shop',
-      path: '/',
+      pageTitle: 'Admin Products',
+      path: '/admin/products',
       hasProducts: products.length > 0,
       activeShop: true,
       productCSS: true
