@@ -1,5 +1,3 @@
-'use strict';
-
 const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
@@ -13,14 +11,13 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
-  const product = new Product({
-    title: req.body.title,
-    imageUrl: req.body.imageUrl,
-    description: req.body.description,
-    price: req.body.price,
-  });
+  const title = req.body.title;
+  const imageUrl = req.body.imageUrl;
+  const price = req.body.price;
+  const description = req.body.description;
+  const product = new Product(title, imageUrl, description, price);
   product.save();
-  res.redirect('/products');
+  res.redirect('/');
 };
 
 exports.getProducts = (req, res, next) => {
@@ -28,10 +25,7 @@ exports.getProducts = (req, res, next) => {
     res.render('admin/products', {
       prods: products,
       pageTitle: 'Admin Products',
-      path: '/admin/products',
-      hasProducts: products.length > 0,
-      activeShop: true,
-      productCSS: true
+      path: '/admin/products'
     });
   });
 };
