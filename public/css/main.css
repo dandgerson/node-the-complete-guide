@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: #222222;
+  color: #999999;
 }
 
 main {
@@ -49,7 +50,7 @@ form {
 
 .main-header__item a {
   text-decoration: none;
-  color: white;
+  color: #999999;
 }
 
 .main-header__item a:hover,
@@ -65,7 +66,7 @@ form {
   position: fixed;
   left: 0;
   top: 0;
-  background: white;
+  background: #999999;
   z-index: 10;
   padding: 2rem 1rem 1rem 2rem;
   transform: translateX(-100%);
@@ -105,12 +106,12 @@ form {
 }
 
 #side-menu-toggle {
-  border: 1px solid white;
+  border: 1px solid #999999;
   font: inherit;
   padding: 0.5rem;
   display: block;
   background: transparent;
-  color: white;
+  color: #999999;
   cursor: pointer;
 }
 

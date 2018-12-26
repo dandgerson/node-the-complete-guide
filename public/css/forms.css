@@ -15,9 +15,10 @@
   border: 1px solid #a1a1a1;
   font: inherit;
   border-radius: 2px;
+  background-color: #999999;
 }
 
 .form-control input:focus,
 .form-control textarea:focus {
-  outline-color: #00695c;
+  outline-color: #89F5A2;
 }
